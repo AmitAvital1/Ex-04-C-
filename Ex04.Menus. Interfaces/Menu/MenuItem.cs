@@ -5,15 +5,15 @@ namespace Ex04.Menus.Interfaces
 {
     public class MenuItem
     {
-        private string m_Title;
-        private List<MenuItem> m_SubMenuItems;
+        protected string m_Title;
+        protected List<MenuItem> m_SubMenuItems;    
         IMenuItemAction m_ItemAction;
-        private string m_ExitPrinter;
+        protected eMenuExit m_ExitPrinter;
 
         public MenuItem(string i_Title)
         {
             m_Title = i_Title;
-            m_ExitPrinter = "Back";
+            m_ExitPrinter = eMenuExit.Back;
             m_SubMenuItems = new List<MenuItem>();
         }
 
@@ -44,7 +44,7 @@ namespace Ex04.Menus.Interfaces
                 printMenuFormat();
                 try
                 {
-                    getUserMenuInput(out int o_UserInput, 0, m_MenuItems.Count);
+                    getUserMenuInput(out int o_UserInput, 0, m_SubMenuItems.Count);
                     Console.Clear();
                     if (o_UserInput == 0)
                     {
@@ -74,7 +74,7 @@ namespace Ex04.Menus.Interfaces
             }
 
             Console.WriteLine($"0. {m_ExitPrinter}");
-            Console.WriteLine($"Please enter your choice (1-{m_SubMenuItems.Count} or 0 to {m_ExitPrinter}");
+            Console.WriteLine($"Please enter your choice (1-{m_SubMenuItems.Count} or 0 to {m_ExitPrinter.ToString().ToLower()}");
         }
 
         private void getUserMenuInput(out int o_UserInput, int i_MinValue, int i_MaxValue)

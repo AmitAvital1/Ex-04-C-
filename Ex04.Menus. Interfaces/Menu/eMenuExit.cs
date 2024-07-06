@@ -2,6 +2,7 @@
 {
     public enum eMenuExit
     {
-        
+        Exit,
+        Back
     }
 }
