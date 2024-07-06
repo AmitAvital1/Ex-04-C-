@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.32929.386
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex04.Menus. Interfaces", "Ex04.Menus. Interfaces\Ex04.Menus. Interfaces.csproj", "{A82CC2D0-2AA1-443B-926B-BA4E62B8C9A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex04.Menus.Events", "Ex04.Menus.Events\Ex04.Menus.Events.csproj", "{7DE8C498-AA99-4C68-B8FC-4F30965A7AE2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex04.Menus.Test", "Ex04.Menus.Test\Ex04.Menus.Test.csproj", "{D4FE5D01-7005-40C4-88DD-4FEFF9B16670}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{A82CC2D0-2AA1-443B-926B-BA4E62B8C9A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A82CC2D0-2AA1-443B-926B-BA4E62B8C9A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A82CC2D0-2AA1-443B-926B-BA4E62B8C9A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DE8C498-AA99-4C68-B8FC-4F30965A7AE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DE8C498-AA99-4C68-B8FC-4F30965A7AE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DE8C498-AA99-4C68-B8FC-4F30965A7AE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DE8C498-AA99-4C68-B8FC-4F30965A7AE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4FE5D01-7005-40C4-88DD-4FEFF9B16670}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4FE5D01-7005-40C4-88DD-4FEFF9B16670}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4FE5D01-7005-40C4-88DD-4FEFF9B16670}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4FE5D01-7005-40C4-88DD-4FEFF9B16670}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

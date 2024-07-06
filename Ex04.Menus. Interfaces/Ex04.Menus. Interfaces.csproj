@@ -41,6 +41,7 @@
     <Compile Include="Exception\InvalidRangeValueException.cs" />
     <Compile Include="Menu\MainMenu.cs" />
     <Compile Include="Menu\MenuItem.cs" />
+    <Compile Include="Program.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

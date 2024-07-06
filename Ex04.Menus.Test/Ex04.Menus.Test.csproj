@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7DE8C498-AA99-4C68-B8FC-4F30965A7AE2}</ProjectGuid>
+    <ProjectGuid>{D4FE5D01-7005-40C4-88DD-4FEFF9B16670}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Ex04.Menus.Events</RootNamespace>
-    <AssemblyName>Ex04.Menus.Events</AssemblyName>
+    <RootNamespace>Ex04.Menus.Test</RootNamespace>
+    <AssemblyName>Ex04.Menus.Test</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -36,12 +36,22 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Exception\InvalidRangeValueException.cs" />
-    <Compile Include="Menu\eMenuExit.cs" />
-    <Compile Include="Menu\MainMenu.cs" />
-    <Compile Include="Menu\MenuItem.cs" />
+    <Compile Include="CreatedMenus\VersionAndCapitals\CapitalHandler.cs" />
+    <Compile Include="CreatedMenus\ShowDateOrTime\DateProcedure.cs" />
+    <Compile Include="CreatedMenus\MenusBuilder.cs" />
+    <Compile Include="CreatedMenus\ShowDateOrTime\TimeProcedure.cs" />
+    <Compile Include="CreatedMenus\VersionAndCapitals\VersionHandler.cs" />
     <Compile Include="Program.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Ex04.Menus. Interfaces\Ex04.Menus. Interfaces.csproj">
+      <Project>{A82CC2D0-2AA1-443B-926B-BA4E62B8C9A0}</Project>
+      <Name>Ex04.Menus. Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ex04.Menus.Events\Ex04.Menus.Events.csproj">
+      <Project>{7de8c498-aa99-4c68-b8fc-4f30965a7ae2}</Project>
+      <Name>Ex04.Menus.Events</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

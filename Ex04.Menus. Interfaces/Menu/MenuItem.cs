@@ -32,6 +32,11 @@ namespace Ex04.Menus.Interfaces
             return m_SubMenuItems;
         }
 
+        public void AddNewMenuItem(MenuItem i_MenuItem)
+        {
+            m_SubMenuItems.Add(i_MenuItem);
+        }
+
         public IMenuItemAction GetItemAction()
         {
             return m_ItemAction;
@@ -52,7 +57,7 @@ namespace Ex04.Menus.Interfaces
                     }
                     else
                     {
-                        handleSelectedMenuItem(o_UserInput);
+                        menuItem_SelectedMenu(o_UserInput);
                     }
                 }
                 catch (Exception ex)
@@ -65,16 +70,16 @@ namespace Ex04.Menus.Interfaces
 
         private void printMenuFormat()
         {
-            Console.WriteLine($"{m_Title}");
-            Console.WriteLine("=======================");
+            Console.WriteLine($"**{m_Title}**");
+            Console.WriteLine("-----------------------");
 
             for (int i = 0; i < m_SubMenuItems.Count; i++)
             {
-                Console.WriteLine($"{i + 1}. {m_SubMenuItems[i].GetTitle()}");
+                Console.WriteLine($"{i + 1} -> {m_SubMenuItems[i].GetTitle()}");
             }
 
-            Console.WriteLine($"0. {m_ExitPrinter}");
-            Console.WriteLine($"Please enter your choice (1-{m_SubMenuItems.Count} or 0 to {m_ExitPrinter.ToString().ToLower()}");
+            Console.WriteLine($"0 -> {m_ExitPrinter}");
+            Console.WriteLine($"Enter your request: (1-{m_SubMenuItems.Count} or press '0' to {m_ExitPrinter.ToString().ToLower()}).");
         }
 
         private void getUserMenuInput(out int o_UserInput, int i_MinValue, int i_MaxValue)
@@ -90,14 +95,13 @@ namespace Ex04.Menus.Interfaces
 
         }
 
-        //TODO FIX IT!!!
-        private void handleSelectedMenuItem(int i_UserInput)
+        private void menuItem_SelectedMenu(int i_UserInput)
         {
             MenuItem userSelectedItem = m_SubMenuItems[i_UserInput - 1];
 
             if (userSelectedItem.GetMenuItems().Count > 0)
             {
-                userSelectedItem.printMenuFormat();
+                userSelectedItem.PrintMenu();
             }
             else
             {
