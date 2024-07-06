@@ -7,7 +7,7 @@ namespace Ex04.Menus.Interfaces
     {
         protected string m_Title;
         protected List<MenuItem> m_SubMenuItems;    
-        IMenuItemAction m_ItemAction;
+        internal IMenuItemAction m_ItemAction;
         protected eMenuExit m_ExitPrinter;
 
         public MenuItem(string i_Title)
@@ -92,7 +92,6 @@ namespace Ex04.Menus.Interfaces
             {
                 throw new InvalidRangeValueException(i_MinValue, i_MaxValue, "Choice");
             }
-
         }
 
         private void menuItem_SelectedMenu(int i_UserInput)
@@ -106,6 +105,7 @@ namespace Ex04.Menus.Interfaces
             else
             {
                 userSelectedItem.GetItemAction().Execute();
+                Console.WriteLine("\n");
             }
         }
     }

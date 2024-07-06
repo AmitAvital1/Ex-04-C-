@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Ex04.Menus.Events.Menu
 {
@@ -53,7 +50,6 @@ namespace Ex04.Menus.Events.Menu
 
         public void PrintMenu()
         {
-            
             while (true)
             {
                 printMenuFormat();
@@ -90,6 +86,7 @@ namespace Ex04.Menus.Events.Menu
             else
             {
                 userSelectedItem.OnMenuItemAction();
+                Console.WriteLine("\n");
             }
         }
 

@@ -10,7 +10,6 @@ namespace Ex04.Menus.Test.CreatedMenus
     {
         public static Interfaces.MenuItem BuildInterfacesMenu()
         {
-            
             Interfaces.MenuItem versionAndCapitalsItem = new Interfaces.MenuItem("Version and Capitals");
             Interfaces.MenuItem versionItem = new Interfaces.MenuItem("Show Version", new VersionHandler());
             Interfaces.MenuItem CapitalItem = new Interfaces.MenuItem("Count Capitals", new CapitalHandler());

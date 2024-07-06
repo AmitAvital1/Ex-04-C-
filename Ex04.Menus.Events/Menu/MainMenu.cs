@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Ex04.Menus.Events.Menu
+﻿namespace Ex04.Menus.Events.Menu
 {
     public class MainMenu : MenuItem
     {

@@ -13,11 +13,11 @@ namespace Ex04.Menus.Test.CreatedMenus
         {
             string userSentence;
             int countNumberOfUpperCases;
+
             Console.WriteLine("Please Enter Your Sentence:");
             userSentence = Console.ReadLine();
-
             countNumberOfUpperCases = userSentence.Count(char.IsUpper);
-            Console.WriteLine($"There Are {countNumberOfUpperCases} Capitals In Your Sentence");
+            Console.WriteLine($"There Are {countNumberOfUpperCases} upper case letters in your sentence.");
         }
     }
 }

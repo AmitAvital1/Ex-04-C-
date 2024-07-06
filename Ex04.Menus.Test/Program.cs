@@ -1,17 +1,15 @@
-﻿using Ex04.Menus.Interfaces;
-using Ex04.Menus.Events;
-using Ex04.Menus.Test.CreatedMenus;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Ex04.Menus.Test.CreatedMenus;
 
 namespace Ex04.Menus.Test
 {
     public class Program
     {
         public static void Main()
+        {
+            runMenuTests();
+        }
+
+        private static void runMenuTests()
         {
             Interfaces.MenuItem m_MainMenuInterface = MenusBuilder.BuildInterfacesMenu();
             m_MainMenuInterface.PrintMenu();
